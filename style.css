@@ -1,0 +1,456 @@
+/* General Body Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    padding-top: 56px; /* Adjust for fixed navbar height */
+}
+
+/* NEW: Hero Area Container */
+.hero-area {
+    position: relative; /* Establishes a positioning context for children */
+    min-height: 90vh; /* Make it tall enough to show the effect */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    overflow: hidden; /* Ensures content doesn't spill out of rounded corners */
+    border-radius: 0 0 15px 15px; /* Rounded bottom corners for the entire hero area */
+}
+
+/* NEW: Background Carousel Styles */
+#heroBackgroundCarousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Behind the content */
+}
+
+.hero-carousel-img {
+    height: 100%; /* Make images fill the carousel height */
+    object-fit: cover; /* Cover the area without distortion */
+    filter: brightness(60%); /* Slightly dim the background images for text readability */
+}
+
+/* NEW: Hero Content Styles (Fixed on top) */
+.hero-content {
+    position: relative; /* Stacks above the carousel */
+    z-index: 2; /* Higher z-index than the carousel */
+    width: 100%; /* Take full width of parent container */
+    max-width: 800px; /* Limit content width for readability */
+    padding: 20px;
+    /* Optional: Add a subtle overlay behind the text for better contrast */
+    background-color: rgba(0, 0, 0, 0.02); /* Semi-transparent dark background */
+    border-radius: 15px;
+    /*box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);*/
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Hero Search Form (retained from previous hero option) */
+.hero-search-form {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 50px;
+    padding: 8px 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-search-form .form-control {
+    border: none;
+    background: transparent;
+    padding-left: 20px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.hero-search-form .form-control:focus {
+    box-shadow: none;
+}
+
+.hero-search-form .btn-primary {
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    min-width: 120px;
+}
+
+
+/* Navbar Customizations (keep as is) */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.6rem;
+    border-radius: 8px;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--bs-primary) !important;
+}
+
+/* Sections Padding (keep as is) */
+section {
+    padding: 80px 0;
+}
+
+/* Card Styling (Services and Properties) (keep as is) */
+.service-card, .property-card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover, .property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Service Card Icons (keep as is) */
+.service-card .card-body i {
+    font-size: 3.5rem;
+    color: var(--bs-primary);
+}
+
+/* Property Card Specifics (keep as is) */
+.property-card .card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.property-card .card-text.text-primary {
+    font-size: 1.6rem !important;
+    margin-bottom: 15px;
+}
+
+.property-card ul {
+    padding-left: 0;
+    margin-bottom: 15px;
+    color: #6c757d;
+}
+
+.property-card ul li {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.property-card ul li i {
+    font-size: 1.1rem;
+    margin-right: 5px;
+    color: var(--bs-secondary);
+}
+
+/* Testimonials Carousel (keep as is) */
+#testimonialCarousel .carousel-item {
+    padding: 20px;
+}
+
+#testimonialCarousel .rounded-circle {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid var(--bs-primary);
+}
+
+#testimonialCarousel .carousel-control-prev,
+#testimonialCarousel .carousel-control-next {
+    filter: invert(100%);
+}
+
+/* Contact Section Icons (keep as is) */
+.contact-info i {
+    font-size: 1.2rem;
+}
+
+/* Footer Social Icons (keep as is) */
+.social-icons a {
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--bs-primary) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .hero-area {
+        min-height: 70vh; /* Adjust height for smaller screens */
+    }
+    .hero-content h1 {
+        font-size: 2.50rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    .navbar-brand {/* General Body Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    padding-top: 56px; /* Adjust for fixed navbar height */
+}
+
+/* NEW: Hero Area Container */
+.hero-area {
+    position: relative; /* Establishes a positioning context for children */
+    min-height: 90vh; /* Make it tall enough to show the effect */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    overflow: hidden; /* Ensures content doesn't spill out of rounded corners */
+    border-radius: 0 0 15px 15px; /* Rounded bottom corners for the entire hero area */
+}
+
+/* NEW: Background Carousel Styles */
+#heroBackgroundCarousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Behind the content */
+}
+
+.hero-carousel-img {
+    height: 100%; /* Make images fill the carousel height */
+    object-fit: cover; /* Cover the area without distortion */
+    filter: brightness(60%); /* Slightly dim the background images for text readability */
+}
+
+/* NEW: Hero Content Styles (Fixed on top) */
+.hero-content {
+    position: relative; /* Stacks above the carousel */
+    z-index: 2; /* Higher z-index than the carousel */
+    width: 100%; /* Take full width of parent container */
+    max-width: 800px; /* Limit content width for readability */
+    padding: 20px;
+    /* Optional: Add a subtle overlay behind the text for better contrast */
+    background-color: rgba(0, 0, 0, 0.02); /* Semi-transparent dark background */
+    border-radius: 15px;
+    /*box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);*/
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Hero Search Form (retained from previous hero option) */
+.hero-search-form {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 50px;
+    padding: 8px 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Ensure flex container can wrap items */
+    display: flex; /* Ensure it's a flex container (Bootstrap's d-flex already does this, but good to be explicit) */
+    flex-wrap: wrap; /* Allow items inside to wrap onto new lines if needed */
+}
+
+.hero-search-form .form-control {
+    border: none;
+    background: transparent;
+    padding-left: 20px;
+    height: 50px;
+    border-radius: 50px;
+    flex-grow: 1; /* Allow the input to grow and take available space */
+    min-width: 0; /* Allow the input to shrink smaller than its content if necessary */
+}
+
+.hero-search-form .form-control:focus {
+    box-shadow: none;
+}
+
+.hero-search-form .btn-primary {
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    min-width: 120px; /* This was the problematic line for small screens */
+    flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+
+/* Navbar Customizations (keep as is) */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.6rem;
+    border-radius: 8px;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--bs-primary) !important;
+}
+
+/* Sections Padding (keep as is) */
+section {
+    padding: 80px 0;
+}
+
+/* Card Styling (Services and Properties) (keep as is) */
+.service-card, .property-card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover, .property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Service Card Icons (keep as is) */
+.service-card .card-body i {
+    font-size: 3.5rem;
+    color: var(--bs-primary);
+}
+
+/* Property Card Specifics (keep as is) */
+.property-card .card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.property-card .card-text.text-primary {
+    font-size: 1.6rem !important;
+    margin-bottom: 15px;
+}
+
+.property-card ul {
+    padding-left: 0;
+    margin-bottom: 15px;
+    color: #6c757d;
+}
+
+.property-card ul li {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.property-card ul li i {
+    font-size: 1.1rem;
+    margin-right: 5px;
+    color: var(--bs-secondary);
+}
+
+/* Testimonials Carousel (keep as is) */
+#testimonialCarousel .carousel-item {
+    padding: 20px;
+}
+
+#testimonialCarousel .rounded-circle {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid var(--bs-primary);
+}
+
+#testimonialCarousel .carousel-control-prev,
+#testimonialCarousel .carousel-control-next {
+    filter: invert(100%);
+}
+
+/* Contact Section Icons (keep as is) */
+.contact-info i {
+    font-size: 1.2rem;
+}
+
+/* Footer Social Icons (keep as is) */
+.social-icons a {
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--bs-primary) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .hero-area {
+        min-height: 70vh; /* Adjust height for smaller screens */
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+    section {
+        padding: 50px 0;
+    }
+    .property-card .card-img-top {
+        height: 200px;
+    }
+
+    /* --- NEW/MODIFIED SEARCH BAR RESPONSIVENESS --- */
+    .hero-search-form {
+        padding: 8px 10px; /* Slightly reduce padding on the form itself */
+        flex-direction: column; /* Force input and button to stack vertically */
+        align-items: stretch; /* Make them fill the width when stacked */
+        border-radius: 10px; /* Adjust corner radius for stacked look */
+    }
+
+    .hero-search-form .form-control {
+        height: 45px; /* Slightly smaller input height */
+        font-size: 0.9rem; /* Smaller font inside input */
+        padding-left: 15px; /* Adjust padding */
+        margin-bottom: 8px; /* Add space between input and button when stacked */
+        margin-right: 0 !important; /* Remove any Bootstrap 'me-2' margin */
+        border-radius: 8px; /* Match new form radius */
+    }
+
+    .hero-search-form .btn-primary {
+        font-size: 1rem; /* Smaller font for button text */
+        padding: 10px 20px; /* Adjust padding */
+        min-width: auto; /* IMPORTANT: Remove fixed min-width to allow shrinking */
+        width: 100%; /* Make button full width when stacked */
+        border-radius: 8px; /* Match new form radius */
+    }
+    /* --- END NEW/MODIFIED SEARCH BAR RESPONSIVENESS --- */
+}
+
+/* Optional: Additional breakpoint for very small phones (e.g., <480px) if needed */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem; /* Even smaller for tiny screens */
+    }
+    .hero-content p {
+        font-size: 0.95rem; /* Even smaller for tiny screens */
+    }
+    .hero-area {
+        min-height: 60vh; /* Make hero a bit shorter on very small screens */
+    }
+}
+        font-size: 1.4rem;
+    }
+    section {
+        padding: 50px 0;
+    }
+    .property-card .card-img-top {
+        height: 200px;
+    }
+}
